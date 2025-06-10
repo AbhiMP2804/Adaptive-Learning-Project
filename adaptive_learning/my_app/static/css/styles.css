@@ -77,6 +77,11 @@ nav.nav-hidden {
     font-weight: 700;
 }
 
+.logo i {
+    color: #ff0000;
+    animation: spin 4s linear infinite;
+}
+
 .logo-text {
     background: var(--primary-gradient);
     background-clip: text;
