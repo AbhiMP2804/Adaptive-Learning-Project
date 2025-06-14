@@ -65,10 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
             questions[index].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
-        // Update button states
-        prevBtn.disabled = index === 0;
-        nextBtn.disabled = index === totalQuestions - 1;
-
         // Update current question index
         currentQuestionIndex = index;
     }
@@ -81,10 +77,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function checkAllQuestionsAnswered() {
         const answeredQuestions = document.querySelectorAll('input[type="radio"]:checked').length;
+        const submitContainer = document.querySelector('.submit-container');
         if (answeredQuestions === totalQuestions) {
-            buttonContainer.classList.add('show');
+            submitContainer.classList.add('show');
         } else {
-            buttonContainer.classList.remove('show');
+            submitContainer.classList.remove('show');
         }
     }
 

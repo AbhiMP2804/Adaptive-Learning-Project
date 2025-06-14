@@ -246,7 +246,7 @@ body {
     box-shadow: var(--box-shadow);
 }
 
-.module-card:hover .module-card-inner {
+.module-card.flipped .module-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -283,7 +283,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.module-card:hover .module-icon {
+.module-card.flipped .module-icon {
     transform: scale(1.1) rotate(5deg);
 }
 
