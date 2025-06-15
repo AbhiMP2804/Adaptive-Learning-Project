@@ -93,6 +93,22 @@ h1, h2, h3, h4, h5, h6 {
     transition: width var(--transition-fast);
 }
 
+.progress-container {
+    margin: 0.7rem 0;
+}
+
+.progress-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+
+.progress-text span {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
 /* Questions Container */
 .questions-container {
     position: relative;

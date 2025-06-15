@@ -17,8 +17,13 @@
         <p class="test-instructions">Answer all questions carefully to get the most accurate recommendations</p>
 
         <!-- Progress Bar -->
-        <div class="progress-bar">
-            <div class="progress" id="progress"></div>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="progress-text">
+                <span id="questions-answered">0</span>/<span id="total-questions">{{ questions|length }}</span> Questions Answered
+            </div>
         </div>
 
         <form method="POST" action="{% url 'submit_test' topic_id=topic.topic_id subtopic_id=subtopic.subtopic_id %}">
@@ -26,7 +31,7 @@
             <div class="questions-container">
                 {% for question in questions %}
                 <div class="question-card">
-                    <p class="question-text"><strong>Question <span style="color: #94182f; font-weight: 700;">{{ forloop.counter }}</span>/{{ questions|length }} :</strong> {{ question.question_text }}</p>
+                    <p class="question-text"><strong>Question <span style="color: #94182f; font-weight: 700;">{{ forloop.counter }}</span> :</strong> {{ question.question_text }}</p>
                     <div class="options">
                         {% for option in question.options.all %}
                         <label class="option">

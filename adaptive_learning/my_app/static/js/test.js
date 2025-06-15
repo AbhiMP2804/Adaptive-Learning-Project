@@ -73,6 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const answeredQuestions = document.querySelectorAll('input[type="radio"]:checked').length;
         const progress = (answeredQuestions / totalQuestions) * 100;
         progressBar.style.width = `${progress}%`;
+        
+        // Update the questions answered counter
+        document.getElementById('questions-answered').textContent = answeredQuestions;
     }
 
     function checkAllQuestionsAnswered() {
